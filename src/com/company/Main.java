@@ -146,7 +146,7 @@ public class Main {
         };
         System.out.println(lowestAverageOfArrays(weeklyMonthTemperatures));
 
-
+// test
     }
 
 
