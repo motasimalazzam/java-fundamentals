@@ -131,9 +131,9 @@ public class Main {
         int turtleCount = 0;
         System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
-        flipNHeads(5);
+//        flipNHeads(5);
 
-        clock();
+//        clock();
         System.out.println(roll(5));
         int a[] = {5, 5, 4, 3, 2};
         System.out.println(containsDuplicates(a));
@@ -146,7 +146,7 @@ public class Main {
         };
         System.out.println(lowestAverageOfArrays(weeklyMonthTemperatures));
 
-// test
+
     }
 
 
