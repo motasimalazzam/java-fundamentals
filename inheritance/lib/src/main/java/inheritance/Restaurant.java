@@ -1,8 +1,10 @@
 package inheritance;
 
+import interfaces.RestaurantInterface;
+
 import java.util.*;
 
-public class Restaurant implements RestaurantInterface  {
+public class Restaurant implements RestaurantInterface {
 
     private String name;
     private double numberOfStars ;
@@ -13,10 +15,6 @@ public class Restaurant implements RestaurantInterface  {
     private LinkedList<Review> reviews = new LinkedList<>();
 
     //  Constructor
-
-    public LinkedList<Review> getReviews() {
-        return reviews;
-    }
 
     public Restaurant(String name, double numberOfStars, String  priceCategory) {
 
@@ -31,6 +29,10 @@ public class Restaurant implements RestaurantInterface  {
         }
 
         this.priceCategory = priceCategory;
+    }
+
+    public LinkedList<Review> getReviews() {
+        return reviews;
     }
 
     //  Methods
@@ -69,18 +71,6 @@ public class Restaurant implements RestaurantInterface  {
     }
 
 
-    //    public String getName() {
-//        return this.name;
-//    }
-//
-//    public double getStars() {
-//        return this.numberOfStars;
-//    }
-//
-//    public String getPriceCategory() {
-//        return this.priceCategory;
-//    }
-//
     @Override
     public String toString() {
         return "Restaurant{" +

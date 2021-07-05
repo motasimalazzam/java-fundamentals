@@ -1,4 +1,6 @@
-package inheritance;
+package interfaces;
+
+import inheritance.Review;
 
 public interface RestaurantInterface {
 
