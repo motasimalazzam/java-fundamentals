@@ -1,6 +1,8 @@
 package inheritance;
 
-public class Review implements ReviewInterface{
+import interfaces.ReviewInterface;
+
+public class Review implements ReviewInterface {
     private String body;
     private String author;
     public double stars;
