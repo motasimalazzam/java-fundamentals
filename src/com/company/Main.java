@@ -144,11 +144,13 @@ public class Main {
         int turtleCount = 0;
         System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
-//        flipNHeads(5);
+       flipNHeads(5);
 
-//        clock();
+       clock();
+
 
 //        CALL AND PRINT Rolling Dice METHOD
+
         System.out.println(roll(5));
 
 
@@ -174,10 +176,12 @@ public class Main {
                 {65, 56, 55, 52, 55, 62, 57}
         };
 
+
         int avgArray [] = lowestAverageOfArrays(weeklyMonthTemperatures);
 
         System.out.println(" CALL AND PRINT LOWEST AVERAGE OF ARRAYS");
         System.out.println("LOWEST AVERAGE OF ARRAYS is: " + Arrays.toString(avgArray));
+
 
     }
 
