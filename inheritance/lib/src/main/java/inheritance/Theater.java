@@ -1,10 +1,10 @@
 package inheritance;
 
-import interfaces.TheaterInteface;
+import interfaces.TheaterInterface;
 
 import java.util.*;
 
-public class Theater implements TheaterInteface {
+public class Theater implements TheaterInterface {
 
     private String name;
     private List<String> movies = new ArrayList<>();
@@ -26,7 +26,7 @@ public class Theater implements TheaterInteface {
         return this.name;
     }
 
-    @Override
+
     public Review addNewRev(String body, String author, int stars) {
         Review newReview = new Review(body, author, stars);
         this.reviews.put("",newReview);

@@ -54,29 +54,29 @@ public class Library {
 //        THEATER
 
         //   NEW THEATER OBJ
-        Theater movie = new Theater("azzam");
-        System.out.println(movie);
+        Theater theater = new Theater("azzam");
+        System.out.println(theater);
 
         //   ADD MOVIES TO MOVIE LIST
-        movie.addMovie("lion");
-        movie.addMovie("tiger");
+        theater.addMovie("lion");
+        theater.addMovie("tiger");
 
        //    PRINT MOVIES
-        System.out.println(movie);
+        System.out.println(theater);
 
        //    PRINT MOVIE LIST
-        System.out.println(movie.getMovies());
+        System.out.println(theater.getMovies());
 
        //     ADD MOVIES TO REVIEW
-        movie.addNewRev("good","oglah",4);
+        theater.addNewRev("good","oglah",4);
 
       //      NEW REVIEW OBJ
         Review rev5 = new Review("good","ahmad", 3);
 
-        movie.addNewRev(rev5,"lion");
-        movie.removeMovie("tiger");
-        movie.addNewRev(rev5,"tiger");
-        System.out.println(movie);
-        System.out.println(movie.getReviews());
+        theater.addNewRev(rev5,"lion");
+        theater.removeMovie("tiger");
+        theater.addNewRev(rev5,"tiger");
+        System.out.println(theater);
+        System.out.println(theater.getReviews());
     }
 }

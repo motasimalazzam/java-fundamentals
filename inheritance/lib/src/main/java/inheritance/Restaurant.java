@@ -31,11 +31,11 @@ public class Restaurant implements RestaurantInterface {
         this.priceCategory = priceCategory;
     }
 
+    //  Methods
+
     public LinkedList<Review> getReviews() {
         return reviews;
     }
-
-    //  Methods
 
     @Override
     public String getName() {
