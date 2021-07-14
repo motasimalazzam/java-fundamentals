@@ -18,16 +18,16 @@ public class LibraryTest {
     public void constructorTestRes(){
         Restaurant test = new Restaurant("kfc", 4 ,"$");
         String expectedName = "kfc";
-        assertEquals("kfc",test.getName());
-        assertEquals(3.0,test.getNumberOfStars(),1.2);
+        assertEquals(expectedName,test.getName());
+        assertEquals(4,test.getNumberOfStars(),1.2);
         assertEquals("$",test.getPriceCategory());
     }
 
 
     @Test
     public void testToStringRestaurant() {
-        Review test = new Review("Good restaurant","Meghem",5);
-        assertEquals("Review{body='Good restaurant', author='Meghem', stars=5.0}",String.valueOf(test));
+        Restaurant test = new Restaurant("kfc", 4 ,"$");
+        assertEquals("Restaurant{name='kfc', numberOfStars=4.0, priceCategory=$}",String.valueOf(test));
 
     }
 
@@ -36,19 +36,23 @@ public class LibraryTest {
         Restaurant test = new Restaurant("kfc", 4 ,"$");
         Review test1 = new Review("Good restaurant","Meghem",5);
         test.addReview(test1);
-        assertTrue("return true if add review", test.getReviews().size() == 1);
+        assertEquals("return true if add review", 1, test.getReviews().size());
     }
 
     //   REVIEW TEST
     @Test
     public void constructorTestRev(){
         Review test = new Review("Good restaurant", "Meghem",5);
-        String expectedName = "kfc";
         assertEquals("Good restaurant",test.getBody());
         assertEquals("Meghem",test.getAuthor());
         assertEquals(5,test.getStars(),0.1);
 
     }
+
+    @Test
+    public void testRev(){
+        Review test = new Review("Good restaurant","Meghem",5);
+        assertEquals("Review{body='Good restaurant', author='Meghem', stars=5.0}",String.valueOf(test));    }
 
     //    SHOP TEST
     @Test
@@ -63,7 +67,7 @@ public class LibraryTest {
     public void constructorTestShop(){
         Shop test = new Shop("carrefour", "supermarket",3);
         String expectedName = "carrefour";
-        assertEquals("carrefour",test.getName());
+        assertEquals(expectedName,test.getName());
         assertEquals("supermarket",test.getDescription());
         assertEquals(3,test.getNumOfDollarSign());
 
@@ -87,15 +91,15 @@ public class LibraryTest {
     public void TestAddReview(){
         Theater testAdd = new Theater("test");
         testAdd.addNewRev("test","test",5);
-        assertTrue("return true if add review", testAdd.getReviews().size() == 1);
+        assertEquals("return true if add review", 1, testAdd.getReviews().size());
     }
     @Test
     public void TestAddAndRemoveReview(){
         Theater testAdd = new Theater("test");
         testAdd.addMovie("test1");
-        assertTrue("return true if add movie", testAdd.getMovies().size() == 1);
+        assertEquals("return true if add movie", 1, testAdd.getMovies().size());
         testAdd.removeMovie("test1");
-        assertTrue("return true if remove movie", testAdd.getMovies().size() == 0);
+        assertEquals("return true if remove movie", 0, testAdd.getMovies().size());
     }
 
 
